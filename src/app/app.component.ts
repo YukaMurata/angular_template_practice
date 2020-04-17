@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Hero } from './hero';
+import { AdService } from './ad.service';
+import { AdItem } from './ad-item';
 
 @Component({
   selector: 'app-root',
   template: `
-    <h1>{{ title }}</h1>
+    <!-- <h1>{{ title }}</h1>
     <h2>My favorite hero is {{ myHero.name }}</h2>
     <p>Heroes:</p>
     <ul>
@@ -22,9 +24,17 @@ import { Hero } from './hero';
     <app-loop-back></app-loop-back>
     <app-little-tour></app-little-tour>
     <app-hero-parent [heroes]="heroes"></app-hero-parent>
+
+    <app-votetaker></app-votetaker>
+    <app-countdown-parent></app-countdown-parent>
+    <app-missioncontrol></app-missioncontrol> -->
+
+    <div>
+      <app-ad-banner [ads]="ads"></app-ad-banner>
+    </div>
   `
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'angular-template-practice';
   heroes = [
     new Hero(1, 'fukumura'),
@@ -34,4 +44,12 @@ export class AppComponent {
   ];
   myHero = this.heroes[2];
   fontSizePx = 16;
+
+  ads: AdItem[];
+
+  constructor(private adService: AdService) {}
+
+  ngOnInit() {
+    this.ads = this.adService.getAds();
+  }
 }

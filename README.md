@@ -36,3 +36,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - (keyup)をつけるだけで keyup イベントを付与できる。特に ts で処理書かなくても、input に入れた値を view に表示させることができる。`例)<input #id (keyup)="0"><p>{{id.value}}</p>`
 
 - @Input()でデータのバケツリレー。(ちょっと面倒)
+
+- `[disabled]='変数名(boolean)'`で有効無効を切り替えることができる
+
+- 子コンポーネントの<app-hogehoge #hoge>タグにローカル変数を持たせることができる。その変数を親コンポーネントで使える。例:`hoge.huga`みたいな感じで。
+- 上記の方法だと、親子の結びつきが親のテンプレート内で完結する必要があり、制限されてしまう。親は子へのアクセスできない。
+- 親子の結びつきが親テンプレート内で完結しない場合は、`ViewChild`を使うと良い。完結するなら上記方法で十分。
+
+- `styles: [h3{color:#fff;}]`とコンポーネント内で指定することもできるが、scss を使いたいので`styleUrls: ['./missioncontrol.component.scss']`で scss を指定する方が良さそう。どちらの場合でもスタイルの適応範囲はコンポーネント内のみ。
