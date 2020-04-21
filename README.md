@@ -44,3 +44,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - 親子の結びつきが親テンプレート内で完結しない場合は、`ViewChild`を使うと良い。完結するなら上記方法で十分。
 
 - `styles: [h3{color:#fff;}]`とコンポーネント内で指定することもできるが、scss を使いたいので`styleUrls: ['./missioncontrol.component.scss']`で scss を指定する方が良さそう。どちらの場合でもスタイルの適応範囲はコンポーネント内のみ。
+
+- パイプ演算子を使うと、データの整形をしてくれる。`new Date()`したものとか。
+- パイプは独自のカスタムパイプを作ることができる。(値を表示したい形に整形するときとかは役立つはず)

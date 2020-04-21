@@ -29,9 +29,36 @@ import { AdItem } from './ad-item';
     <app-countdown-parent></app-countdown-parent>
     <app-missioncontrol></app-missioncontrol> -->
 
-    <div>
+    <!-- <div>
       <app-ad-banner [ads]="ads"></app-ad-banner>
+    </div> -->
+    <h1>Color</h1>
+    <h4>Pick a highlight color</h4>
+    <div>
+      <input type="radio" name="colors" (click)="color = '#E30F66'" /> FUKUMURA
+      <input type="radio" name="colors" (click)="color = '#B6D00F'" /> IKUTA
+      <input type="radio" name="colors" (click)="color = '#2667B4'" /> ISHIDA
+      <input type="radio" name="colors" (click)="color = '#47B0A0'" /> SATO
+      <input type="radio" name="colors" (click)="color = '#9077B4'" /> ODA
+      <input type="radio" name="colors" (click)="color = '#7D318C'" /> NONAKA
+      <input type="radio" name="colors" (click)="color = '#EA708C'" /> MAKINO
+      <input type="radio" name="colors" (click)="color = '#EB760C'" /> HAGA
+      <input type="radio" name="colors" (click)="color = '#E4073A'" /> KAGA
+      <input type="radio" name="colors" (click)="color = '#f9CF14'" /> YOKOYAMA
+      <input type="radio" name="colors" (click)="color = '#C9C9C9'" /> MORITO
+      <input type="radio" name="colors" (click)="color = '#58B5CE'" /> KITAGAWA
+      <input type="radio" name="colors" (click)="color = '#FBE121'" /> OKAMURA
+      <input type="radio" name="colors" (click)="color = '#46AE34'" /> YAMAZAKI
     </div>
+
+    <p [appHighlight]="color" defaultColor="yellow">Highlight me!</p>
+
+    <app-hero-birthday1></app-hero-birthday1>
+    <app-hero-birthday2></app-hero-birthday2>
+
+    <app-power-booster></app-power-booster>
+    <app-power-boost-calculator></app-power-boost-calculator>
+    <app-flying-heroes></app-flying-heroes>
   `
 })
 export class AppComponent implements OnInit {
@@ -46,6 +73,8 @@ export class AppComponent implements OnInit {
   fontSizePx = 16;
 
   ads: AdItem[];
+
+  color: string;
 
   constructor(private adService: AdService) {}
 

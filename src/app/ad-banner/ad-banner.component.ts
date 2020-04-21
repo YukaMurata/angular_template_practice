@@ -4,8 +4,7 @@ import {
   OnDestroy,
   Input,
   ViewChild,
-  ComponentFactoryResolver,
-  ComponentRef
+  ComponentFactoryResolver
 } from '@angular/core';
 import { AdDirective } from '../ad.directive';
 import { AdItem } from '../ad-item';

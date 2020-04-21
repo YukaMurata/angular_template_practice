@@ -23,6 +23,14 @@ import { HeroJobAdComponent } from './hero-job-ad/hero-job-ad.component';
 import { HeroProfileComponent } from './hero-profile/hero-profile.component';
 import { AdDirective } from './ad.directive';
 import { AdService } from './ad.service';
+import { HighlightDirective } from './highlight.directive';
+import { HeroBirthday1Component } from './hero-birthday1/hero-birthday1.component';
+import { HeroBirthday2Component } from './hero-birthday2/hero-birthday2.component';
+import { ExponentialStrengthPipe } from './exponential-strength.pipe';
+import { PowerBoosterComponent } from './power-booster/power-booster.component';
+import { PowerBoostCalculatorComponent } from './power-boost-calculator/power-boost-calculator.component';
+import { FlyingHeroesComponent } from './flying-heroes/flying-heroes.component';
+import { FlyingHeroesPipe } from './flying-heroes.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +52,15 @@ import { AdService } from './ad.service';
     AdBannerComponent,
     HeroJobAdComponent,
     HeroProfileComponent,
-    AdDirective
+    AdDirective,
+    HighlightDirective,
+    HeroBirthday1Component,
+    HeroBirthday2Component,
+    ExponentialStrengthPipe,
+    PowerBoosterComponent,
+    PowerBoostCalculatorComponent,
+    FlyingHeroesComponent,
+    FlyingHeroesPipe
   ],
   entryComponents: [HeroJobAdComponent, HeroProfileComponent],
   imports: [BrowserModule, FormsModule],
